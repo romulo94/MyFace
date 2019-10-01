@@ -20,6 +20,10 @@ export default createGlobalStyle`
     background: linear-gradient(#46b389,#37b1e7)
   }
 
+  html, body {
+    overflow: hidden;
+  }
+
   body {
     -webkit-font-smoothing: antialiased;
   }
