@@ -1,7 +1,12 @@
 import React from 'react';
+import GlobalSytle from './styles/global';
 
 function App() {
-  return <div className="App" />;
+  return (
+    <>
+      <GlobalSytle />
+    </>
+  );
 }
 
 export default App;
