@@ -12,11 +12,6 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
   }
-
-  .svg-test {
-    svg {
-    }
-  }
 `;
 
 export const ContainerSlider = styled.div``;
