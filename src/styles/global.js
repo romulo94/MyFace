@@ -29,7 +29,13 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font: 14px 'Roboto' sans-serif;
+    font: 14px 'Roboto', sans-serif;
+  }
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #fefefe;
+    font-weight: 300;
   }
 
   a {

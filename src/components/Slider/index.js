@@ -83,7 +83,7 @@ export default function Slider() {
         <ReactSlider
           ref={sliderRef}
           {...settings2}
-          style={{ top: 250 }}
+          style={{ top: 200 }}
           className="new-slider"
           // afterChange={console.log}
           // beforeChange={console.log}
@@ -93,7 +93,7 @@ export default function Slider() {
             <Card />
           </ContainerLetter>
           <ContainerLetter>
-            <h1>B</h1>
+            <Card />
           </ContainerLetter>
           <ContainerLetter>
             <h1>C</h1>
