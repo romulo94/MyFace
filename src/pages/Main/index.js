@@ -9,7 +9,8 @@ import Card from '~/components/Card';
 import data from '~/server/data';
 
 export default function Main() {
-  const sliderRef = useRef(null);
+  const sliderRefFather = useRef(null);
+  const sliderRefChildren = useRef(null);
   const [width] = useWidth();
 
   const settings = {
@@ -22,12 +23,12 @@ export default function Main() {
     centerMode: true,
     focusOnSelect: true,
     beforeChange: (current, next) => {
-      sliderRef.current.slickGoTo(next);
+      sliderRefChildren.current.slickGoTo(next);
     },
   };
 
   const settings2 = {
-    draggable: false,
+    draggable: true,
     dots: false,
     infinite: true,
     speed: 400,
@@ -35,6 +36,9 @@ export default function Main() {
     slidesToScroll: 1,
     rtl: false,
     focusOnSelect: true,
+    beforeChange: (current, next) => {
+      sliderRefFather.current.slickGoTo(next);
+    },
   };
 
   const marginAlign = useMemo(() => width / 4.3, [width]);
@@ -45,7 +49,7 @@ export default function Main() {
         <Logo />
       </div>
       <ContainerSlider className="letters-slide">
-        <ReactSlider {...settings}>
+        <ReactSlider ref={sliderRefFather} {...settings}>
           <ContainerLetter>
             <h1>D</h1>
           </ContainerLetter>
@@ -62,7 +66,11 @@ export default function Main() {
             <h1>Z</h1>
           </ContainerLetter>
         </ReactSlider>
-        <ReactSlider ref={sliderRef} {...settings2} style={{ top: 200 }}>
+        <ReactSlider
+          ref={sliderRefChildren}
+          {...settings2}
+          style={{ top: 200 }}
+        >
           <ContainerLetter>
             <Card contacts={data.D} />
           </ContainerLetter>
@@ -76,7 +84,7 @@ export default function Main() {
             <Card contacts={data.S} />
           </ContainerLetter>
           <ContainerLetter>
-            <Card contacts={data.A} />
+            <Card contacts={data.Z} />
           </ContainerLetter>
         </ReactSlider>
       </ContainerSlider>
