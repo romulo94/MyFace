@@ -27,7 +27,7 @@ const data = {
     {
       id: '1642',
       name: 'Rômulo Rocha',
-      role: 'Desenvolvedor FullStack',
+      role: 'DEV FullStack',
       image: Romulo,
     },
     {},

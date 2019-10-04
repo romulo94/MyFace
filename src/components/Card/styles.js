@@ -42,6 +42,7 @@ export const Avatar = styled.img`
   border-radius: 10px 0 0 10px;
   height: 100%;
 `;
+
 export const Info = styled.div`
   margin-bottom: 4px;
   display: flex;

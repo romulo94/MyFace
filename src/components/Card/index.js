@@ -4,6 +4,7 @@ import { Container, Box, Avatar, Info, Plus } from './styles';
 import history from '~/config/history';
 
 export default function Card({ contacts = [{}, {}, {}, {}, {}] }) {
+  console.log(contacts);
   return (
     <Container>
       {contacts.map(contact => (

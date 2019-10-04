@@ -14,7 +14,7 @@ const info = [
   {
     id: '1642',
     name: 'Rômulo Rocha',
-    role: 'Desenvolvedor FullStack',
+    role: 'DEV FullStack',
     image: Romulo,
     email: 'romulo@mundiale.com.br',
     phone: '+5585988389064',
