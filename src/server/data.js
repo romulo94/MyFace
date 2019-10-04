@@ -3,7 +3,6 @@ import Daniel from '~/assets/images/daniel.jpg';
 import Romulo from '~/assets/images/romulo.jpg';
 
 const data = {
-  A: [{}, {}, {}, {}, {}],
   D: [
     {
       id: '2341',
@@ -36,6 +35,7 @@ const data = {
     {},
   ],
   S: [{}, {}, {}, {}, {}],
+  Z: [{}, {}, {}, {}, {}],
 };
 
 export default data;

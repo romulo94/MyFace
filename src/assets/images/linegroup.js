@@ -3,7 +3,7 @@ import React from 'react';
 const linegroup = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="334"
+    width="90%"
     height="5.5"
     viewBox="0 0 334 5.5"
   >

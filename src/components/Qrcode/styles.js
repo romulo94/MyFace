@@ -5,6 +5,10 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 380px) {
+    max-height: 180px;
+  }
 `;
 
 export const Content = styled.div`
@@ -22,5 +26,15 @@ export const Content = styled.div`
   img {
     width: 200px;
     height: 200px;
+  }
+
+  @media (max-width: 380px) {
+    width: 200px;
+    height: 200px;
+
+    img {
+      width: 180px;
+      height: 180px;
+    }
   }
 `;
