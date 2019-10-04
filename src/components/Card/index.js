@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 import { Container, Box, Avatar, Info, Plus } from './styles';
-import history from '~/config/history';
+import history from '~/services/history';
 
-export default function Card({ contacts = [{}, {}, {}, {}, {}] }) {
-  console.log(contacts);
+export default function Card({ contacts }) {
   return (
     <Container>
       {contacts.map(contact => (
@@ -34,3 +34,10 @@ export default function Card({ contacts = [{}, {}, {}, {}, {}] }) {
     </Container>
   );
 }
+
+Card.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.object),
+};
+Card.defaultProps = {
+  contacts: [{}, {}, {}, {}, {}],
+};

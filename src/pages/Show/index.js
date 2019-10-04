@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
 import { Container, GoBack } from './styles';
 import info from '~/server/info';
-import history from '~/config/history';
+import history from '~/services/history';
 import InfoCard from '~/components/InfoCard';
 import Qrcode from '~/components/Qrcode';
 import Header from '~/components/Header';

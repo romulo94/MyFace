@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Group from '~/assets/images/group';
 import LineGroup from '~/assets/images/linegroup';
 
@@ -29,3 +29,8 @@ export default function InfoCard({ email, phone }) {
     </Container>
   );
 }
+
+InfoCard.propTypes = {
+  email: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
+};
