@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin-top: 10px;
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
@@ -9,10 +10,13 @@ export const Container = styled.div`
 `;
 
 export const Box = styled.div`
-  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: ${props => (props.data ? '#ffffff' : 'transparent')};
   margin-bottom: 15px;
   border-radius: 10px;
-  border: 1px solid #efefef;
+  border: ${props => (props.data ? '' : ' 1px solid #efefef')};
   width: 75%;
   height: 65px;
   position: relative;
@@ -25,17 +29,41 @@ export const Box = styled.div`
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #fefefe;
+    background: #fffdfd5c;
 
     transform: translateY(-50%);
   }
+  border-radius: 10px;
+  box-shadow: ${props =>
+    props.data ? 'rgba(0, 0, 0, 0.2) -1px 2px 10px 2px' : ''};
 `;
 
-export const Point = styled.div`
-  left: 8%;
-  position: fixed;
-  border-radius: 50%;
-  width: 8px;
-  height: 8px;
-  background: #efefef;
+export const Avatar = styled.img`
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+`;
+export const Info = styled.div`
+  margin-bottom: 4px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin-left: 10px;
+
+  color: #aeaead;
+  font-size: 12px;
+
+  span:first-of-type {
+    color: #909090;
+    font-weight: 700;
+  }
+`;
+export const Plus = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 70%;
+  border-left: 1px solid gray;
 `;
